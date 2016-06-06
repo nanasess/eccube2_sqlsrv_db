@@ -1,11 +1,12 @@
-﻿CREATE TABLE dtb_mailmaga_template (
-    template_id int NOT NULL,
-    subject nvarchar(max),
-    mail_method int,
-    body nvarchar(max),
-    del_flg smallint NOT NULL DEFAULT 0,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    PRIMARY KEY (template_id)
+﻿CREATE TABLE [dbo].[dtb_mailmaga_template] (
+    [template_id] INT                NOT NULL,
+    [subject]     NVARCHAR (MAX)     NULL,
+    [mail_method] INT                NULL,
+    [body]        NVARCHAR (MAX)     NULL,
+    [del_flg]     SMALLINT           DEFAULT ((0)) NOT NULL,
+    [creator_id]  INT                NOT NULL,
+    [create_date] DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date] DATETIMEOFFSET (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([template_id] ASC)
 );
+

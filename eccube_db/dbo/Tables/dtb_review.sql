@@ -1,17 +1,18 @@
-﻿CREATE TABLE dtb_review (
-    review_id int NOT NULL,
-    product_id int NOT NULL,
-    reviewer_name nvarchar(max) NOT NULL,
-    reviewer_url nvarchar(max),
-    sex smallint,
-    customer_id int,
-    recommend_level smallint NOT NULL,
-    title nvarchar(max) NOT NULL,
-    comment nvarchar(max) NOT NULL,
-    status smallint DEFAULT 2,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    del_flg smallint NOT NULL DEFAULT 0,
-    PRIMARY KEY (review_id)
+﻿CREATE TABLE [dbo].[dtb_review] (
+    [review_id]       INT                NOT NULL,
+    [product_id]      INT                NOT NULL,
+    [reviewer_name]   NVARCHAR (MAX)     NOT NULL,
+    [reviewer_url]    NVARCHAR (MAX)     NULL,
+    [sex]             SMALLINT           NULL,
+    [customer_id]     INT                NULL,
+    [recommend_level] SMALLINT           NOT NULL,
+    [title]           NVARCHAR (MAX)     NOT NULL,
+    [comment]         NVARCHAR (MAX)     NOT NULL,
+    [status]          SMALLINT           DEFAULT ((2)) NULL,
+    [creator_id]      INT                NOT NULL,
+    [create_date]     DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]     DATETIMEOFFSET (7) NOT NULL,
+    [del_flg]         SMALLINT           DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([review_id] ASC)
 );
+

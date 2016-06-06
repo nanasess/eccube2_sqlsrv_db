@@ -1,18 +1,19 @@
-﻿CREATE TABLE dtb_pagelayout (
-    device_type_id int NOT NULL,
-    page_id int NOT NULL,
-    page_name nvarchar(max),
-    url nvarchar(max) NOT NULL,
-    filename nvarchar(max),
-    header_chk smallint DEFAULT 1,
-    footer_chk smallint DEFAULT 1,
-    edit_flg smallint DEFAULT 1,
-    author nvarchar(max),
-    description nvarchar(max),
-    keyword nvarchar(max),
-    update_url nvarchar(max),
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    meta_robots nvarchar(max),
-    PRIMARY KEY (device_type_id, page_id)
+﻿CREATE TABLE [dbo].[dtb_pagelayout] (
+    [device_type_id] INT                NOT NULL,
+    [page_id]        INT                NOT NULL,
+    [page_name]      NVARCHAR (MAX)     NULL,
+    [url]            NVARCHAR (MAX)     NOT NULL,
+    [filename]       NVARCHAR (MAX)     NULL,
+    [header_chk]     SMALLINT           DEFAULT ((1)) NULL,
+    [footer_chk]     SMALLINT           DEFAULT ((1)) NULL,
+    [edit_flg]       SMALLINT           DEFAULT ((1)) NULL,
+    [author]         NVARCHAR (MAX)     NULL,
+    [description]    NVARCHAR (MAX)     NULL,
+    [keyword]        NVARCHAR (MAX)     NULL,
+    [update_url]     NVARCHAR (MAX)     NULL,
+    [create_date]    DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]    DATETIMEOFFSET (7) NOT NULL,
+    [meta_robots]    NVARCHAR (MAX)     NULL,
+    PRIMARY KEY CLUSTERED ([device_type_id] ASC, [page_id] ASC)
 );
+

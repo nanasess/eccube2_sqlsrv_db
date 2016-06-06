@@ -1,14 +1,15 @@
-﻿CREATE TABLE dtb_bloc (
-    device_type_id int NOT NULL,
-    bloc_id int NOT NULL,
-    bloc_name nvarchar(max),
-    tpl_path nvarchar(max),
-    filename varchar(64) NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    php_path nvarchar(max),
-    deletable_flg smallint NOT NULL DEFAULT 1,
-    plugin_id int,
-    PRIMARY KEY (device_type_id, bloc_id),
-    UNIQUE (device_type_id, filename)
+﻿CREATE TABLE [dbo].[dtb_bloc] (
+    [device_type_id] INT                NOT NULL,
+    [bloc_id]        INT                NOT NULL,
+    [bloc_name]      NVARCHAR (MAX)     NULL,
+    [tpl_path]       NVARCHAR (MAX)     NULL,
+    [filename]       VARCHAR (64)       NOT NULL,
+    [create_date]    DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]    DATETIMEOFFSET (7) NOT NULL,
+    [php_path]       NVARCHAR (MAX)     NULL,
+    [deletable_flg]  SMALLINT           DEFAULT ((1)) NOT NULL,
+    [plugin_id]      INT                NULL,
+    PRIMARY KEY CLUSTERED ([device_type_id] ASC, [bloc_id] ASC),
+    UNIQUE NONCLUSTERED ([device_type_id] ASC, [filename] ASC)
 );
+

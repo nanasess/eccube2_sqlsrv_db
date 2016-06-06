@@ -1,12 +1,13 @@
-﻿CREATE TABLE dtb_holiday (
-    holiday_id int NOT NULL,
-    title nvarchar(max) NOT NULL,
-    month smallint NOT NULL,
-    day smallint NOT NULL,
-    rank int NOT NULL DEFAULT 0,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    del_flg smallint NOT NULL DEFAULT 0,
-    PRIMARY KEY (holiday_id)
+﻿CREATE TABLE [dbo].[dtb_holiday] (
+    [holiday_id]  INT                NOT NULL,
+    [title]       NVARCHAR (MAX)     NOT NULL,
+    [month]       SMALLINT           NOT NULL,
+    [day]         SMALLINT           NOT NULL,
+    [rank]        INT                DEFAULT ((0)) NOT NULL,
+    [creator_id]  INT                NOT NULL,
+    [create_date] DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date] DATETIMEOFFSET (7) NOT NULL,
+    [del_flg]     SMALLINT           DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([holiday_id] ASC)
 );
+

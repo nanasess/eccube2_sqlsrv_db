@@ -1,11 +1,12 @@
-﻿CREATE TABLE dtb_kiyaku (
-    kiyaku_id int NOT NULL,
-    kiyaku_title nvarchar(max) NOT NULL,
-    kiyaku_text nvarchar(max) NOT NULL,
-    rank int NOT NULL DEFAULT 0,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    del_flg smallint NOT NULL DEFAULT 0,
-    PRIMARY KEY (kiyaku_id)
+﻿CREATE TABLE [dbo].[dtb_kiyaku] (
+    [kiyaku_id]    INT                NOT NULL,
+    [kiyaku_title] NVARCHAR (MAX)     NOT NULL,
+    [kiyaku_text]  NVARCHAR (MAX)     NOT NULL,
+    [rank]         INT                DEFAULT ((0)) NOT NULL,
+    [creator_id]   INT                NOT NULL,
+    [create_date]  DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]  DATETIMEOFFSET (7) NOT NULL,
+    [del_flg]      SMALLINT           DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([kiyaku_id] ASC)
 );
+

@@ -1,15 +1,16 @@
-﻿CREATE TABLE dtb_deliv (
-    deliv_id int NOT NULL,
-    product_type_id int,
-    name nvarchar(max),
-    service_name nvarchar(max),
-    remark nvarchar(max),
-    confirm_url nvarchar(max),
-    rank int,
-    status smallint NOT NULL DEFAULT 1,
-    del_flg smallint NOT NULL DEFAULT 0,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    PRIMARY KEY (deliv_id)
+﻿CREATE TABLE [dbo].[dtb_deliv] (
+    [deliv_id]        INT                NOT NULL,
+    [product_type_id] INT                NULL,
+    [name]            NVARCHAR (MAX)     NULL,
+    [service_name]    NVARCHAR (MAX)     NULL,
+    [remark]          NVARCHAR (MAX)     NULL,
+    [confirm_url]     NVARCHAR (MAX)     NULL,
+    [rank]            INT                NULL,
+    [status]          SMALLINT           DEFAULT ((1)) NOT NULL,
+    [del_flg]         SMALLINT           DEFAULT ((0)) NOT NULL,
+    [creator_id]      INT                NOT NULL,
+    [create_date]     DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]     DATETIMEOFFSET (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([deliv_id] ASC)
 );
+

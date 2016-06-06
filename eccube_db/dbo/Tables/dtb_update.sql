@@ -1,17 +1,18 @@
-﻿CREATE TABLE dtb_update (
-    module_id int NOT NULL,
-    module_name nvarchar(max) NOT NULL,
-    now_version nvarchar(max),
-    latest_version nvarchar(max) NOT NULL,
-    module_explain nvarchar(max),
-    main_php nvarchar(max) NOT NULL,
-    extern_php nvarchar(max) NOT NULL,
-    install_sql nvarchar(max),
-    uninstall_sql nvarchar(max),
-    other_files nvarchar(max),
-    del_flg smallint NOT NULL DEFAULT 0,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    release_date datetimeoffset NOT NULL,
-    PRIMARY KEY (module_id)
+﻿CREATE TABLE [dbo].[dtb_update] (
+    [module_id]      INT                NOT NULL,
+    [module_name]    NVARCHAR (MAX)     NOT NULL,
+    [now_version]    NVARCHAR (MAX)     NULL,
+    [latest_version] NVARCHAR (MAX)     NOT NULL,
+    [module_explain] NVARCHAR (MAX)     NULL,
+    [main_php]       NVARCHAR (MAX)     NOT NULL,
+    [extern_php]     NVARCHAR (MAX)     NOT NULL,
+    [install_sql]    NVARCHAR (MAX)     NULL,
+    [uninstall_sql]  NVARCHAR (MAX)     NULL,
+    [other_files]    NVARCHAR (MAX)     NULL,
+    [del_flg]        SMALLINT           DEFAULT ((0)) NOT NULL,
+    [create_date]    DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]    DATETIMEOFFSET (7) NOT NULL,
+    [release_date]   DATETIMEOFFSET (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([module_id] ASC)
 );
+

@@ -1,11 +1,13 @@
-﻿CREATE TABLE dtb_module (
-    module_id int NOT NULL UNIQUE,
-    module_code nvarchar(max) NOT NULL,
-    module_name nvarchar(max) NOT NULL,
-    sub_data nvarchar(max),
-    auto_update_flg smallint NOT NULL DEFAULT 0,
-    del_flg smallint NOT NULL DEFAULT 0,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    PRIMARY KEY(module_id)
+﻿CREATE TABLE [dbo].[dtb_module] (
+    [module_id]       INT                NOT NULL,
+    [module_code]     NVARCHAR (MAX)     NOT NULL,
+    [module_name]     NVARCHAR (MAX)     NOT NULL,
+    [sub_data]        NVARCHAR (MAX)     NULL,
+    [auto_update_flg] SMALLINT           DEFAULT ((0)) NOT NULL,
+    [del_flg]         SMALLINT           DEFAULT ((0)) NOT NULL,
+    [create_date]     DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]     DATETIMEOFFSET (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([module_id] ASC),
+    UNIQUE NONCLUSTERED ([module_id] ASC)
 );
+

@@ -1,13 +1,14 @@
-﻿CREATE TABLE dtb_best_products (
-    best_id int NOT NULL,
-    category_id int NOT NULL,
-    rank int NOT NULL DEFAULT 0,
-    product_id int NOT NULL,
-    title nvarchar(max),
-    comment nvarchar(max),
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    del_flg smallint NOT NULL DEFAULT 0,
-    PRIMARY KEY (best_id)
+﻿CREATE TABLE [dbo].[dtb_best_products] (
+    [best_id]     INT                NOT NULL,
+    [category_id] INT                NOT NULL,
+    [rank]        INT                DEFAULT ((0)) NOT NULL,
+    [product_id]  INT                NOT NULL,
+    [title]       NVARCHAR (MAX)     NULL,
+    [comment]     NVARCHAR (MAX)     NULL,
+    [creator_id]  INT                NOT NULL,
+    [create_date] DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date] DATETIMEOFFSET (7) NOT NULL,
+    [del_flg]     SMALLINT           DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([best_id] ASC)
 );
+

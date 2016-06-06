@@ -1,17 +1,18 @@
-﻿CREATE TABLE dtb_member (
-    member_id int NOT NULL,
-    name nvarchar(max),
-    department nvarchar(max),
-    login_id nvarchar(max) NOT NULL,
-    password nvarchar(max) NOT NULL,
-    salt nvarchar(max) NOT NULL,
-    authority smallint NOT NULL,
-    rank int NOT NULL DEFAULT 0,
-    work smallint NOT NULL DEFAULT 1,
-    del_flg smallint NOT NULL DEFAULT 0,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    login_date datetimeoffset,
-    PRIMARY KEY (member_id)
+﻿CREATE TABLE [dbo].[dtb_member] (
+    [member_id]   INT                NOT NULL,
+    [name]        NVARCHAR (MAX)     NULL,
+    [department]  NVARCHAR (MAX)     NULL,
+    [login_id]    NVARCHAR (MAX)     NOT NULL,
+    [password]    NVARCHAR (MAX)     NOT NULL,
+    [salt]        NVARCHAR (MAX)     NOT NULL,
+    [authority]   SMALLINT           NOT NULL,
+    [rank]        INT                DEFAULT ((0)) NOT NULL,
+    [work]        SMALLINT           DEFAULT ((1)) NOT NULL,
+    [del_flg]     SMALLINT           DEFAULT ((0)) NOT NULL,
+    [creator_id]  INT                NOT NULL,
+    [create_date] DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date] DATETIMEOFFSET (7) NOT NULL,
+    [login_date]  DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([member_id] ASC)
 );
+

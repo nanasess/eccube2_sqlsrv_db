@@ -1,12 +1,19 @@
-﻿CREATE TABLE dtb_category (
-    category_id int NOT NULL,
-    category_name nvarchar(max),
-    parent_category_id int NOT NULL DEFAULT 0,
-    level int NOT NULL,
-    rank int,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    del_flg smallint NOT NULL DEFAULT 0,
-    PRIMARY KEY (category_id)
+﻿CREATE TABLE [dbo].[dtb_category] (
+    [category_id]        INT                NOT NULL,
+    [category_name]      NVARCHAR (MAX)     NULL,
+    [parent_category_id] INT                DEFAULT ((0)) NOT NULL,
+    [level]              INT                NOT NULL,
+    [rank]               INT                NULL,
+    [creator_id]         INT                NOT NULL,
+    [create_date]        DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]        DATETIMEOFFSET (7) NOT NULL,
+    [del_flg]            SMALLINT           DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([category_id] ASC)
 );
+
+
+GO
+CREATE NONCLUSTERED INDEX [dtb_category_rank_idx]
+    ON [dbo].[dtb_category]([rank] ASC)
+    INCLUDE([category_id]);
+

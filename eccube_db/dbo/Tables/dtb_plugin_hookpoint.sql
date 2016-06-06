@@ -1,10 +1,11 @@
-﻿CREATE TABLE dtb_plugin_hookpoint (
-    plugin_hookpoint_id int NOT NULL,
-    plugin_id int NOT NULL,
-    callback nvarchar(max),
-    use_flg smallint NOT NULL DEFAULT 1,
-    hook_point nvarchar(max) NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    PRIMARY KEY (plugin_hookpoint_id)
+﻿CREATE TABLE [dbo].[dtb_plugin_hookpoint] (
+    [plugin_hookpoint_id] INT                NOT NULL,
+    [plugin_id]           INT                NOT NULL,
+    [callback]            NVARCHAR (MAX)     NULL,
+    [use_flg]             SMALLINT           DEFAULT ((1)) NOT NULL,
+    [hook_point]          NVARCHAR (MAX)     NOT NULL,
+    [create_date]         DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]         DATETIMEOFFSET (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([plugin_hookpoint_id] ASC)
 );
+

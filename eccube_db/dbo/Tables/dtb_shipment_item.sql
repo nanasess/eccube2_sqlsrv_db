@@ -1,12 +1,18 @@
-﻿CREATE TABLE dtb_shipment_item (
-    shipping_id int NOT NULL,
-    product_class_id int NOT NULL,
-    order_id int NOT NULL,
-    product_name nvarchar(max) NOT NULL,
-    product_code nvarchar(64),
-    classcategory_name1 nvarchar(max),
-    classcategory_name2 nvarchar(max),
-    price numeric(9),
-    quantity numeric(9),
-    PRIMARY KEY (shipping_id, product_class_id, order_id)
+﻿CREATE TABLE [dbo].[dtb_shipment_item] (
+    [shipping_id]         INT            NOT NULL,
+    [product_class_id]    INT            NOT NULL,
+    [order_id]            INT            NOT NULL,
+    [product_name]        NVARCHAR (MAX) NOT NULL,
+    [product_code]        NVARCHAR (64)  NULL,
+    [classcategory_name1] NVARCHAR (MAX) NULL,
+    [classcategory_name2] NVARCHAR (MAX) NULL,
+    [price]               NUMERIC (9)    NULL,
+    [quantity]            NUMERIC (9)    NULL,
+    PRIMARY KEY CLUSTERED ([shipping_id] ASC, [product_class_id] ASC, [order_id] ASC),
+    CONSTRAINT [FK_dtb_shipment_item_dtb_shipping] FOREIGN KEY ([shipping_id], [order_id]) REFERENCES [dbo].[dtb_shipping] ([shipping_id], [order_id])
 );
+
+
+GO
+ALTER TABLE [dbo].[dtb_shipment_item] NOCHECK CONSTRAINT [FK_dtb_shipment_item_dtb_shipping];
+

@@ -1,48 +1,65 @@
-﻿CREATE TABLE dtb_products (
-    product_id int NOT NULL,
-    name nvarchar(max) NOT NULL,
-    maker_id int,
-    status smallint NOT NULL DEFAULT 2,
-    comment1 nvarchar(max),
-    comment2 nvarchar(max),
-    comment3 nvarchar(max),
-    comment4 nvarchar(max),
-    comment5 nvarchar(max),
-    comment6 nvarchar(max),
-    note nvarchar(max),
-    main_list_comment nvarchar(max),
-    main_list_image nvarchar(max),
-    main_comment nvarchar(max),
-    main_image nvarchar(max),
-    main_large_image nvarchar(max),
-    sub_title1 nvarchar(max),
-    sub_comment1 nvarchar(max),
-    sub_image1 nvarchar(max),
-    sub_large_image1 nvarchar(max),
-    sub_title2 nvarchar(max),
-    sub_comment2 nvarchar(max),
-    sub_image2 nvarchar(max),
-    sub_large_image2 nvarchar(max),
-    sub_title3 nvarchar(max),
-    sub_comment3 nvarchar(max),
-    sub_image3 nvarchar(max),
-    sub_large_image3 nvarchar(max),
-    sub_title4 nvarchar(max),
-    sub_comment4 nvarchar(max),
-    sub_image4 nvarchar(max),
-    sub_large_image4 nvarchar(max),
-    sub_title5 nvarchar(max),
-    sub_comment5 nvarchar(max),
-    sub_image5 nvarchar(max),
-    sub_large_image5 nvarchar(max),
-    sub_title6 nvarchar(max),
-    sub_comment6 nvarchar(max),
-    sub_image6 nvarchar(max),
-    sub_large_image6 nvarchar(max),
-    del_flg smallint NOT NULL DEFAULT 0,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    deliv_date_id int,
-    PRIMARY KEY (product_id)
+﻿CREATE TABLE [dbo].[dtb_products] (
+    [product_id]        INT                NOT NULL,
+    [name]              NVARCHAR (MAX)     NOT NULL,
+    [maker_id]          INT                NULL,
+    [status]            SMALLINT           DEFAULT ((2)) NOT NULL,
+    [comment1]          NVARCHAR (MAX)     NULL,
+    [comment2]          NVARCHAR (MAX)     NULL,
+    [comment3]          NVARCHAR (MAX)     NULL,
+    [comment4]          NVARCHAR (MAX)     NULL,
+    [comment5]          NVARCHAR (MAX)     NULL,
+    [comment6]          NVARCHAR (MAX)     NULL,
+    [note]              NVARCHAR (MAX)     NULL,
+    [main_list_comment] NVARCHAR (MAX)     NULL,
+    [main_list_image]   NVARCHAR (MAX)     NULL,
+    [main_comment]      NVARCHAR (MAX)     NULL,
+    [main_image]        NVARCHAR (MAX)     NULL,
+    [main_large_image]  NVARCHAR (MAX)     NULL,
+    [sub_title1]        NVARCHAR (MAX)     NULL,
+    [sub_comment1]      NVARCHAR (MAX)     NULL,
+    [sub_image1]        NVARCHAR (MAX)     NULL,
+    [sub_large_image1]  NVARCHAR (MAX)     NULL,
+    [sub_title2]        NVARCHAR (MAX)     NULL,
+    [sub_comment2]      NVARCHAR (MAX)     NULL,
+    [sub_image2]        NVARCHAR (MAX)     NULL,
+    [sub_large_image2]  NVARCHAR (MAX)     NULL,
+    [sub_title3]        NVARCHAR (MAX)     NULL,
+    [sub_comment3]      NVARCHAR (MAX)     NULL,
+    [sub_image3]        NVARCHAR (MAX)     NULL,
+    [sub_large_image3]  NVARCHAR (MAX)     NULL,
+    [sub_title4]        NVARCHAR (MAX)     NULL,
+    [sub_comment4]      NVARCHAR (MAX)     NULL,
+    [sub_image4]        NVARCHAR (MAX)     NULL,
+    [sub_large_image4]  NVARCHAR (MAX)     NULL,
+    [sub_title5]        NVARCHAR (MAX)     NULL,
+    [sub_comment5]      NVARCHAR (MAX)     NULL,
+    [sub_image5]        NVARCHAR (MAX)     NULL,
+    [sub_large_image5]  NVARCHAR (MAX)     NULL,
+    [sub_title6]        NVARCHAR (MAX)     NULL,
+    [sub_comment6]      NVARCHAR (MAX)     NULL,
+    [sub_image6]        NVARCHAR (MAX)     NULL,
+    [sub_large_image6]  NVARCHAR (MAX)     NULL,
+    [del_flg]           SMALLINT           DEFAULT ((0)) NOT NULL,
+    [creator_id]        INT                NOT NULL,
+    [create_date]       DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]       DATETIMEOFFSET (7) NOT NULL,
+    [deliv_date_id]     INT                NULL,
+    PRIMARY KEY CLUSTERED ([product_id] ASC),
+    CONSTRAINT [FK_dtb_products_dtb_maker] FOREIGN KEY ([maker_id]) REFERENCES [dbo].[dtb_maker] ([maker_id])
 );
+
+
+GO
+ALTER TABLE [dbo].[dtb_products] NOCHECK CONSTRAINT [FK_dtb_products_dtb_maker];
+
+
+GO
+CREATE NONCLUSTERED INDEX [maker_id_idx]
+    ON [dbo].[dtb_products]([maker_id] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [dtb_products_status_del_flg_idx]
+    ON [dbo].[dtb_products]([status] ASC, [del_flg] ASC)
+    INCLUDE([product_id]);
+

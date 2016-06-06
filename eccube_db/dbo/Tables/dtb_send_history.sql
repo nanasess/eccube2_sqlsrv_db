@@ -1,16 +1,17 @@
-﻿CREATE TABLE dtb_send_history (
-    send_id int NOT NULL,
-    mail_method smallint,
-    subject nvarchar(max),
-    body nvarchar(max),
-    send_count int,
-    complete_count int NOT NULL DEFAULT 0,
-    start_date datetimeoffset,
-    end_date datetimeoffset,
-    search_data nvarchar(max),
-    del_flg smallint NOT NULL DEFAULT 0,
-    creator_id int NOT NULL,
-    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    update_date datetimeoffset NOT NULL,
-    PRIMARY KEY (send_id)
+﻿CREATE TABLE [dbo].[dtb_send_history] (
+    [send_id]        INT                NOT NULL,
+    [mail_method]    SMALLINT           NULL,
+    [subject]        NVARCHAR (MAX)     NULL,
+    [body]           NVARCHAR (MAX)     NULL,
+    [send_count]     INT                NULL,
+    [complete_count] INT                DEFAULT ((0)) NOT NULL,
+    [start_date]     DATETIMEOFFSET (7) NULL,
+    [end_date]       DATETIMEOFFSET (7) NULL,
+    [search_data]    NVARCHAR (MAX)     NULL,
+    [del_flg]        SMALLINT           DEFAULT ((0)) NOT NULL,
+    [creator_id]     INT                NOT NULL,
+    [create_date]    DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
+    [update_date]    DATETIMEOFFSET (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([send_id] ASC)
 );
+
