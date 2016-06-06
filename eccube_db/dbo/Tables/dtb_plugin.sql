@@ -1,0 +1,21 @@
+﻿CREATE TABLE dtb_plugin (
+    plugin_id int NOT NULL,
+    plugin_name nvarchar(max) NOT NULL,
+    plugin_code nvarchar(max) NOT NULL,
+    class_name nvarchar(max) NOT NULL,
+    author nvarchar(max),
+    author_site_url nvarchar(max),
+    plugin_site_url nvarchar(max),
+    plugin_version nvarchar(max),
+    compliant_version nvarchar(max),
+    plugin_description nvarchar(max),
+    priority int NOT NULL DEFAULT 0,
+    enable smallint NOT NULL DEFAULT 0,
+    free_field1 nvarchar(max),
+    free_field2 nvarchar(max),
+    free_field3 nvarchar(max),
+    free_field4 nvarchar(max),
+    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_date datetimeoffset NOT NULL,
+    PRIMARY KEY (plugin_id)
+);

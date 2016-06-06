@@ -1,0 +1,23 @@
+﻿CREATE TABLE dtb_products_class (
+    product_class_id int NOT NULL,
+    product_id int NOT NULL,
+    classcategory_id1 int NOT NULL DEFAULT 0,
+    classcategory_id2 int NOT NULL DEFAULT 0,
+    product_type_id int NOT NULL DEFAULT 0,
+    product_code nvarchar(64),
+    stock numeric(9),
+    stock_unlimited smallint NOT NULL DEFAULT 0,
+    sale_limit numeric(9),
+    price01 numeric(9),
+    price02 numeric(9) NOT NULL,
+    deliv_fee numeric(9),
+    point_rate numeric(9) NOT NULL DEFAULT 0,
+    creator_id int NOT NULL,
+    create_date datetimeoffset NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_date datetimeoffset NOT NULL,
+    down_filename nvarchar(max),
+    down_realfilename nvarchar(max),
+    del_flg smallint NOT NULL DEFAULT 0,
+    PRIMARY KEY (product_class_id),
+    UNIQUE (product_id, classcategory_id1, classcategory_id2)
+);
