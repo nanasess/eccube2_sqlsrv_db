@@ -95,3 +95,13 @@ CREATE NONCLUSTERED INDEX [deliv_fee_idx]
     ON [dbo].[dtb_products_class]([deliv_fee] ASC)
     INCLUDE([product_id]);
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品規格',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = NULL,
+    @level2name = NULL

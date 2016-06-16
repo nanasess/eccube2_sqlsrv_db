@@ -15,3 +15,76 @@
 GO
 ALTER TABLE [dbo].[dtb_classcategory] NOCHECK CONSTRAINT [FK_dtb_classcategory_dtb_class];
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'規格分類ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'classcategory_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'規格分類名',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'name'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'規格ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'class_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'順番',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'rank'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成者',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'creator_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'create_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'更新日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'update_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'削除フラグ',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = N'COLUMN',
+    @level2name = N'del_flg'
