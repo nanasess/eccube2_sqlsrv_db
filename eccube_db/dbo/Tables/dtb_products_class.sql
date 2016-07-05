@@ -105,3 +105,147 @@ EXEC sp_addextendedproperty @name = N'MS_Description',
     @level1name = N'dtb_products_class',
     @level2type = NULL,
     @level2name = NULL
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品規格ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'product_class_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'product_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'カテゴリ分類ID1',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'classcategory_id1'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'カテゴリ分類ID2',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'classcategory_id2'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品種別ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'product_type_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品コード',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'product_code'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'在庫数',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'stock'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'在庫数無制限',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'stock_unlimited'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'販売制限数',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'sale_limit'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'標準価格',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'price01'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'販売価格',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'price02'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'送料',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'deliv_fee'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ポイント付与率',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'point_rate'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成者ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'creator_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'create_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'更新日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products_class',
+    @level2type = N'COLUMN',
+    @level2name = N'update_date'

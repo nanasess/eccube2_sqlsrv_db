@@ -10,3 +10,76 @@
     PRIMARY KEY CLUSTERED ([log_id] ASC)
 );
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ログID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'log_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'モジュールID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'module_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'バックアップパス',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'buckup_path'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'エラーフラグ',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'error_flg'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'エラー内容',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'error'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'OK',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'ok'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'create_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'更新日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = N'COLUMN',
+    @level2name = N'update_date'

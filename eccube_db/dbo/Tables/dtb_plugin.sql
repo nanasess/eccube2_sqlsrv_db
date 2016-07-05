@@ -20,3 +20,166 @@
     PRIMARY KEY CLUSTERED ([plugin_id] ASC)
 );
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'プラグインID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'plugin_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'プラグイン名',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'plugin_name'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'プラグインコード',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'plugin_code'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'クラス名',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'class_name'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成者',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'author'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サイトURL',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'author_site_url'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サイトURL',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'plugin_site_url'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'バージョン',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'plugin_version'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'対応バージョン',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'compliant_version'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'詳細',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'plugin_description'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'優先度',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'priority'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'有効',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'enable'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'自由項目1',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'free_field1'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'自由項目2',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'free_field2'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'自由項目3',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'free_field3'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'自由項目4',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'free_field4'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'create_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'更新日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_plugin',
+    @level2type = N'COLUMN',
+    @level2name = N'update_date'

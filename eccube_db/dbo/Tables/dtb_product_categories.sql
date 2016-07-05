@@ -27,3 +27,22 @@ CREATE NONCLUSTERED INDEX [dtb_product_categories_rank_idx]
     ON [dbo].[dtb_product_categories]([rank] ASC)
     INCLUDE([product_id]);
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_product_categories',
+    @level2type = N'COLUMN',
+    @level2name = N'product_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'カテゴリID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_product_categories',
+    @level2type = N'COLUMN',
+    @level2name = N'category_id'

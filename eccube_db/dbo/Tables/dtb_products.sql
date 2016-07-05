@@ -63,3 +63,409 @@ CREATE NONCLUSTERED INDEX [dtb_products_status_del_flg_idx]
     ON [dbo].[dtb_products]([status] ASC, [del_flg] ASC)
     INCLUDE([product_id]);
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'product_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'商品名',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'name'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'メーカーID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'maker_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ステータス',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'status'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'コメント1',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'comment1'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'コメント2',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'comment2'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'コメント3',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'comment3'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'コメント4',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'comment4'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'コメント5',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'comment5'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'コメント6',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'comment6'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'備考',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'note'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'一覧コメント',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'main_list_comment'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'一覧画像',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'main_list_image'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'メインコメント',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'main_comment'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'メイン画像',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'main_image'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'メイン拡大画像',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'main_large_image'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブタイトル1',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_title1'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブコメント1',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_comment1'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ画像1',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_image1'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ拡大画像1',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_large_image1'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブタイトル2',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_title2'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブコメント2',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_comment2'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ画像2',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_image2'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ拡大画像2',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_large_image2'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブタイトル3',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_title3'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブコメント3',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_comment3'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ画像3',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_image3'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ拡大画像3',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_large_image3'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブタイトル4',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_title4'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブコメント4',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_comment4'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ画像4',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_image4'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ拡大画像4',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_large_image4'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブタイトル5',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_title5'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブコメント5',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_comment5'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ画像5',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_image5'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ拡大画像5',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_large_image5'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブタイトル6',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_title6'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブコメント6',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_comment6'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ画像6',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_image6'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'サブ拡大画像6',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'sub_large_image6'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'削除フラグ',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'del_flg'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成者',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'creator_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'create_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'更新日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'update_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'配達可能日',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_products',
+    @level2type = N'COLUMN',
+    @level2name = N'deliv_date_id'

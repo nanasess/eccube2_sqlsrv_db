@@ -15,3 +15,22 @@ ALTER TABLE [dbo].[dtb_payment_options] NOCHECK CONSTRAINT [FK_dtb_payment_optio
 GO
 ALTER TABLE [dbo].[dtb_payment_options] NOCHECK CONSTRAINT [FK_dtb_payment_options_dtb_payment];
 
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'配送業者ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_payment_options',
+    @level2type = N'COLUMN',
+    @level2name = N'deliv_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'支払い方法ID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_payment_options',
+    @level2type = N'COLUMN',
+    @level2name = N'payment_id'
