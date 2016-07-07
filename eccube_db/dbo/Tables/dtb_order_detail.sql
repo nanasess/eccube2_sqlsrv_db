@@ -20,7 +20,15 @@
 GO
 ALTER TABLE [dbo].[dtb_order_detail] NOCHECK CONSTRAINT [FK_dtb_order_detail_dtb_order];
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'注文詳細情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_order_detail',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'受注詳細ID',

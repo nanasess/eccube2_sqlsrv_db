@@ -16,3 +16,12 @@
     PRIMARY KEY CLUSTERED ([module_id] ASC)
 );
 
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'(未使用)アップデート情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_update',
+    @level2type = NULL,
+    @level2name = NULL

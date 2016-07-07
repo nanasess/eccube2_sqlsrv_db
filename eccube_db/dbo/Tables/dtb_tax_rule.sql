@@ -15,3 +15,12 @@
     PRIMARY KEY CLUSTERED ([tax_rule_id] ASC)
 );
 
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'課税規則情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_tax_rule',
+    @level2type = NULL,
+    @level2name = NULL

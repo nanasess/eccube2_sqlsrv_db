@@ -17,7 +17,15 @@ CREATE NONCLUSTERED INDEX [dtb_category_rank_idx]
     ON [dbo].[dtb_category]([rank] ASC)
     INCLUDE([category_id]);
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'カテゴリ情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_category',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'カテゴリID',

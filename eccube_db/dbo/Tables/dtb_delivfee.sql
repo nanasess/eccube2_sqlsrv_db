@@ -11,7 +11,15 @@
 GO
 ALTER TABLE [dbo].[dtb_delivfee] NOCHECK CONSTRAINT [FK_dtb_delivfee_dtb_deliv];
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'送料情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_deliv_ee',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'配送業者ID',

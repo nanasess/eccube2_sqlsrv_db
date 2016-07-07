@@ -12,7 +12,15 @@
     PRIMARY KEY CLUSTERED ([api_config_id] ASC)
 );
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'API設定',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_api_config',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'設定ID',

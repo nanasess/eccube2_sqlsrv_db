@@ -15,3 +15,12 @@
     PRIMARY KEY CLUSTERED ([send_id] ASC)
 );
 
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'メルマガ送信履歴',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_send_history',
+    @level2type = NULL,
+    @level2name = NULL

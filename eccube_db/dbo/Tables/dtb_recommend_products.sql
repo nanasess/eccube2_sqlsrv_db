@@ -10,3 +10,12 @@
     PRIMARY KEY CLUSTERED ([product_id] ASC)
 );
 
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'おすすめ商品情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_recommend_products',
+    @level2type = NULL,
+    @level2name = NULL

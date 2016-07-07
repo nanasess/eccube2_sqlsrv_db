@@ -16,3 +16,12 @@
 GO
 ALTER TABLE [dbo].[dtb_shipment_item] NOCHECK CONSTRAINT [FK_dtb_shipment_item_dtb_shipping];
 
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'配送商品情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_shipment_item',
+    @level2type = NULL,
+    @level2name = NULL

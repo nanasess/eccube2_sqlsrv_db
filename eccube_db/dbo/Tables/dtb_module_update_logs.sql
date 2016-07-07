@@ -10,7 +10,15 @@
     PRIMARY KEY CLUSTERED ([log_id] ASC)
 );
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'更新ログ',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_module_update_logs',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'ログID',

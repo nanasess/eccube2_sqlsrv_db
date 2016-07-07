@@ -54,7 +54,15 @@ ALTER TABLE [dbo].[dtb_customer] NOCHECK CONSTRAINT [FK_dtb_customer_mtb_pref];
 GO
 ALTER TABLE [dbo].[dtb_customer] NOCHECK CONSTRAINT [FK_dtb_customer_mtb_sex];
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'会員情報',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_customer',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'会員ID',

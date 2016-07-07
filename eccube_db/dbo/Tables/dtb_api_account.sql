@@ -9,7 +9,15 @@
     PRIMARY KEY CLUSTERED ([api_account_id] ASC)
 );
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'APIアカウント',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_api_account',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'APIアカウントID',

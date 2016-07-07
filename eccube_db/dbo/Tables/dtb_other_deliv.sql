@@ -30,6 +30,15 @@ ALTER TABLE [dbo].[dtb_other_deliv] NOCHECK CONSTRAINT [FK_dtb_other_deliv_dtb_c
 
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'その他のお届け先',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_other_deliv',
+    @level2type = NULL,
+    @level2name = NULL
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'お届け先ID',
     @level0type = N'SCHEMA',
     @level0name = N'dbo',

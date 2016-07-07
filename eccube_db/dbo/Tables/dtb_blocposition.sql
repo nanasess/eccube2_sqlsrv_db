@@ -9,6 +9,15 @@
 );
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ブロック配置',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_blocposition',
+    @level2type = NULL,
+    @level2name = NULL
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'デバイス種別ID',
     @level0type = N'SCHEMA',
     @level0name = N'dbo',

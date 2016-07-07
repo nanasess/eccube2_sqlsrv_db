@@ -15,7 +15,15 @@
 GO
 ALTER TABLE [dbo].[dtb_classcategory] NOCHECK CONSTRAINT [FK_dtb_classcategory_dtb_class];
 
-
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'規格分類',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_classcategory',
+    @level2type = NULL,
+    @level2name = NULL
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
     @value = N'規格分類ID',
