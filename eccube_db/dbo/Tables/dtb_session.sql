@@ -14,3 +14,40 @@ EXEC sp_addextendedproperty @name = N'MS_Description',
     @level1name = N'dtb_session',
     @level2type = NULL,
     @level2name = NULL
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'セッションID',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_session',
+    @level2type = N'COLUMN',
+    @level2name = N'sess_id'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'データ',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_session',
+    @level2type = N'COLUMN',
+    @level2name = N'sess_data'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'作成日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_session',
+    @level2type = N'COLUMN',
+    @level2name = N'create_date'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'更新日時',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'dtb_session',
+    @level2type = N'COLUMN',
+    @level2name = N'update_date'
