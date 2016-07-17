@@ -1,10 +1,10 @@
 ﻿CREATE TABLE [dbo].[dtb_deliv] (
     [deliv_id]        INT                NOT NULL,
     [product_type_id] INT                NULL,
-    [name]            NVARCHAR (MAX)     NULL,
-    [service_name]    NVARCHAR (MAX)     NULL,
+    [name]            NVARCHAR (256)     NULL,
+    [service_name]    NVARCHAR (256)     NULL,
     [remark]          NVARCHAR (MAX)     NULL,
-    [confirm_url]     NVARCHAR (MAX)     NULL,
+    [confirm_url]     NVARCHAR (4000)     NULL,
     [rank]            INT                NULL,
     [status]          SMALLINT           DEFAULT ((1)) NOT NULL,
     [del_flg]         SMALLINT           DEFAULT ((0)) NOT NULL,

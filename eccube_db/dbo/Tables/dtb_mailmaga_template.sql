@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[dtb_mailmaga_template] (
     [template_id] INT                NOT NULL,
-    [subject]     NVARCHAR (MAX)     NULL,
+    [subject]     NVARCHAR (256)     NULL,
     [mail_method] INT                NULL,
     [body]        NVARCHAR (MAX)     NULL,
     [del_flg]     SMALLINT           DEFAULT ((0)) NOT NULL,

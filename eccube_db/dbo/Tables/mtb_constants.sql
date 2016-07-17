@@ -1,8 +1,8 @@
 ﻿CREATE TABLE mtb_constants (
     id varchar(64),
-    name nvarchar(max),
+    name nvarchar(256),
     rank smallint NOT NULL DEFAULT 0,
-    remarks nvarchar(max),
+    remarks nvarchar(256),
     PRIMARY KEY (id)
 );
 GO

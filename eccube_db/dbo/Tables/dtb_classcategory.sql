@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[dtb_classcategory] (
     [classcategory_id] INT                NOT NULL,
-    [name]             NVARCHAR (MAX)     NULL,
+    [name]             NVARCHAR (256)     NULL,
     [class_id]         INT                NOT NULL,
     [rank]             INT                NULL,
     [creator_id]       INT                NOT NULL,

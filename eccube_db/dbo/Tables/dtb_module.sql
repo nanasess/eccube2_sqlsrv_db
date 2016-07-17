@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[dtb_module] (
     [module_id]       INT                NOT NULL,
-    [module_code]     NVARCHAR (MAX)     NOT NULL,
-    [module_name]     NVARCHAR (MAX)     NOT NULL,
+    [module_code]     NVARCHAR (256)     NOT NULL,
+    [module_name]     NVARCHAR (256)     NOT NULL,
     [sub_data]        NVARCHAR (MAX)     NULL,
     [auto_update_flg] SMALLINT           DEFAULT ((0)) NOT NULL,
     [del_flg]         SMALLINT           DEFAULT ((0)) NOT NULL,

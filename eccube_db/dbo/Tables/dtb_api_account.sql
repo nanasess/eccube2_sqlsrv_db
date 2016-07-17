@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[dtb_api_account] (
     [api_account_id] INT                NOT NULL,
-    [api_access_key] NVARCHAR (MAX)     NOT NULL,
-    [api_secret_key] NVARCHAR (MAX)     NOT NULL,
+    [api_access_key] VARCHAR (256)     NOT NULL,
+    [api_secret_key] VARCHAR (256)     NOT NULL,
     [enable]         SMALLINT           DEFAULT ((0)) NOT NULL,
     [del_flg]        SMALLINT           DEFAULT ((0)) NOT NULL,
     [create_date]    DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,
