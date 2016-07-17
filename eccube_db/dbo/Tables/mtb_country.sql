@@ -1,6 +1,6 @@
 ﻿CREATE TABLE mtb_country (
     id int,
-    name nvarchar(max),
+    name nvarchar(256),
     rank int NOT NULL,
     PRIMARY KEY (id)
 );

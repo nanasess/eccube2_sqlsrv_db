@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[dtb_kiyaku] (
     [kiyaku_id]    INT                NOT NULL,
-    [kiyaku_title] NVARCHAR (MAX)     NOT NULL,
+    [kiyaku_title] NVARCHAR (256)     NOT NULL,
     [kiyaku_text]  NVARCHAR (MAX)     NOT NULL,
     [rank]         INT                DEFAULT ((0)) NOT NULL,
     [creator_id]   INT                NOT NULL,

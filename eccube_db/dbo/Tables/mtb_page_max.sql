@@ -1,6 +1,6 @@
 ﻿CREATE TABLE mtb_page_max (
     id smallint,
-    name nvarchar(max),
+    name nvarchar(256),
     rank smallint NOT NULL DEFAULT 0,
     PRIMARY KEY (id)
 );

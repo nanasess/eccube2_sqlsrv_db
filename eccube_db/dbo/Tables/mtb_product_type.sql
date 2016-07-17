@@ -1,6 +1,6 @@
 ﻿CREATE TABLE mtb_product_type (
     id smallint,
-    name nvarchar(max),
+    name nvarchar(256),
     rank smallint NOT NULL,
     PRIMARY KEY (id)
 );

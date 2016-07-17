@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[dtb_mailtemplate] (
     [template_id] INT                NOT NULL,
-    [subject]     NVARCHAR (MAX)     NULL,
+    [subject]     NVARCHAR (256)     NULL,
     [header]      NVARCHAR (MAX)     NULL,
     [footer]      NVARCHAR (MAX)     NULL,
     [creator_id]  INT                NOT NULL,

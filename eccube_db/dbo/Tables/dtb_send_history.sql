@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[dtb_send_history] (
     [send_id]        INT                NOT NULL,
     [mail_method]    SMALLINT           NULL,
-    [subject]        NVARCHAR (MAX)     NULL,
+    [subject]        NVARCHAR (4000)     NULL,
     [body]           NVARCHAR (MAX)     NULL,
     [send_count]     INT                NULL,
     [complete_count] INT                DEFAULT ((0)) NOT NULL,

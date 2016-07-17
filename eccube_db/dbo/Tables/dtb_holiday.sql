@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[dtb_holiday] (
     [holiday_id]  INT                NOT NULL,
-    [title]       NVARCHAR (MAX)     NOT NULL,
+    [title]       NVARCHAR (256)     NOT NULL,
     [month]       SMALLINT           NOT NULL,
     [day]         SMALLINT           NOT NULL,
     [rank]        INT                DEFAULT ((0)) NOT NULL,

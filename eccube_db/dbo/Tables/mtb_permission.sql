@@ -1,6 +1,6 @@
 ﻿CREATE TABLE mtb_permission (
     id varchar(64),
-    name nvarchar(max),
+    name nvarchar(256),
     rank smallint NOT NULL DEFAULT 0,
     PRIMARY KEY (id)
 );

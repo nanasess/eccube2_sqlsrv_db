@@ -4,7 +4,7 @@
     send_date datetimeoffset,
     template_id int,
     creator_id int NOT NULL,
-    subject nvarchar(max),
+    subject nvarchar(256),
     mail_body nvarchar(max),
     PRIMARY KEY (send_id)
 );

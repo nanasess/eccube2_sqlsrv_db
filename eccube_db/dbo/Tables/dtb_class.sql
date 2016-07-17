@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[dtb_class] (
     [class_id]    INT                NOT NULL,
-    [name]        NVARCHAR (MAX)     NULL,
+    [name]        NVARCHAR (256)     NULL,
     [rank]        INT                NULL,
     [creator_id]  INT                NOT NULL,
     [create_date] DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,

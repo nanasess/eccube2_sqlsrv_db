@@ -3,7 +3,7 @@
     [category_id] INT                NOT NULL,
     [rank]        INT                DEFAULT ((0)) NOT NULL,
     [product_id]  INT                NOT NULL,
-    [title]       NVARCHAR (MAX)     NULL,
+    [title]       NVARCHAR (256)     NULL,
     [comment]     NVARCHAR (MAX)     NULL,
     [creator_id]  INT                NOT NULL,
     [create_date] DATETIMEOFFSET (7) DEFAULT (getdate()) NOT NULL,

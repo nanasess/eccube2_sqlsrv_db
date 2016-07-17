@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [dbo].[dtb_api_config] (
     [api_config_id]         INT                NOT NULL,
-    [operation_name]        NVARCHAR (MAX)     NOT NULL,
-    [operation_description] NVARCHAR (MAX)     NULL,
-    [auth_types]            NVARCHAR (MAX)     NOT NULL,
+    [operation_name]        NVARCHAR (256)     NOT NULL,
+    [operation_description] NVARCHAR (4000)     NULL,
+    [auth_types]            NVARCHAR (256)     NOT NULL,
     [enable]                SMALLINT           DEFAULT ((0)) NOT NULL,
     [is_log]                SMALLINT           DEFAULT ((0)) NOT NULL,
     [sub_data]              NVARCHAR (MAX)     NULL,

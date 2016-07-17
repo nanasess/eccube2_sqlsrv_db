@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[dtb_module_update_logs] (
     [log_id]      INT                NOT NULL,
     [module_id]   INT                NOT NULL,
-    [buckup_path] NVARCHAR (MAX)     NULL,
+    [buckup_path] NVARCHAR (4000)     NULL,
     [error_flg]   SMALLINT           DEFAULT ((0)) NULL,
     [error]       NVARCHAR (MAX)     NULL,
     [ok]          NVARCHAR (MAX)     NULL,

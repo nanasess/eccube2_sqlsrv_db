@@ -1,9 +1,9 @@
 ﻿CREATE TABLE mtb_zip (
     zip_id int,
-    zipcode nvarchar(max),
-    state nvarchar(max),
-    city nvarchar(max),
-    town nvarchar(max),
+    zipcode nvarchar(256),
+    state nvarchar(256),
+    city nvarchar(256),
+    town nvarchar(256),
     PRIMARY KEY(zip_id)
 );
 GO
